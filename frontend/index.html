@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Supreme Markets AI</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Supreme Markets AI</h1>
+      <p>AI Generated Advisory – User discretion advised</p>
+      <div class="filters">
+        <select id="horizon">
+          <option value="intraday">Intraday</option>
+          <option value="swing" selected>Swing</option>
+          <option value="positional">Positional</option>
+          <option value="long-term">Long Term</option>
+        </select>
+        <input id="minConfidence" type="number" min="0" max="100" value="50" />
+        <button id="load">Run AI Scan</button>
+      </div>
+    </header>
+
+    <nav>
+      <button data-view="grid" class="active">Grid</button>
+      <button data-view="heatmap-sector">Sector Heatmap</button>
+      <button data-view="heatmap-index">Index Heatmap</button>
+      <button data-view="scanner">Momentum Scanner</button>
+      <button data-view="feed">AI Signal Feed</button>
+      <button data-view="trader">AI Trader Panel</button>
+    </nav>
+
+    <main>
+      <section id="grid" class="view active"></section>
+      <section id="heatmap-sector" class="view"></section>
+      <section id="heatmap-index" class="view"></section>
+      <section id="scanner" class="view"></section>
+      <section id="feed" class="view"></section>
+      <section id="trader" class="view"></section>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
